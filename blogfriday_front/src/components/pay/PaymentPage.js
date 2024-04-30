@@ -98,6 +98,10 @@ const PaymentPage = () => {
 
   const imagePath = `/shopimg/${productImgDetail.product_img0}`;
 
+  //가격 포메팅
+  function formatPrice(price) {
+    return new Intl.NumberFormat("ko-KR", { style: "decimal" }).format(price);
+  }
   return (
     <div>
       <main>
@@ -116,7 +120,7 @@ const PaymentPage = () => {
                 width="300"
                 height="300"
               />
-              <p>가격: {productDetail.product_price}원</p>
+              <p>가격: {formatPrice(productDetail.product_price)}원</p>
               <label>
                 수량 선택:
                 <input
@@ -127,7 +131,8 @@ const PaymentPage = () => {
                 />
               </label>
               <p>
-                총 결제 금액: {productDetail.product_price * orderInfo.quantity}
+                총 결제 금액:{" "}
+                {formatPrice(productDetail.product_price * orderInfo.quantity)}
                 원
               </p>
             </div>
@@ -184,7 +189,10 @@ const PaymentPage = () => {
           <div className="total">
             <div>
               <span>총 결제 금액</span>
-              <span>{productDetail.product_price * orderInfo.quantity}원</span>
+              <span>
+                {formatPrice(productDetail.product_price * orderInfo.quantity)}
+                원
+              </span>
             </div>
           </div>
 
@@ -193,7 +201,8 @@ const PaymentPage = () => {
             onClick={submitOrder}
             disabled={!paymentMethod}
           >
-            {productDetail.product_price * orderInfo.quantity}원 결제하기
+            {formatPrice(productDetail.product_price * orderInfo.quantity)}원
+            결제하기
           </button>
         </div>
       </main>

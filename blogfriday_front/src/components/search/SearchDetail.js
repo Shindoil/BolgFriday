@@ -222,7 +222,9 @@ const SearchDetail = () => {
               </div>
             </div>
             <div>
-              <p>총 금액: {productDetail.product_price * amount}원</p>
+              <p>
+                총 금액: {formatPrice(productDetail.product_price * amount)}원
+              </p>
               <button onClick={onhandlebuybutton}>구매하기</button>
               <button onClick={gocartbutton}>장바구니에 추가</button>
             </div>
