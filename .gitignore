@@ -7,3 +7,5 @@ node_module/
 *.lib
 
 Lib/
+
+env/
