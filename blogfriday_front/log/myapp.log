@@ -1,0 +1,10 @@
+2024-04-01 16:17:26 [restartedMain] INFO  com.blogfriday.ProjectApplication - Starting ProjectApplication using Java 17.0.9 with PID 3572 (D:\ai_chat\springboot-workspace\blogfriday\bin\main started by EZEN in D:\ai_chat\springboot-workspace\blogfriday)
+2024-04-01 16:17:26 [restartedMain] DEBUG com.blogfriday.ProjectApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-04-01 16:17:26 [restartedMain] INFO  com.blogfriday.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-01 16:17:26 [restartedMain] INFO  com.blogfriday.ProjectApplication - Started ProjectApplication in 0.388 seconds (process running for 277.036)
+2024-04-01 16:17:38 [restartedMain] INFO  com.blogfriday.ProjectApplication - Starting ProjectApplication using Java 17.0.9 with PID 15888 (D:\ai_chat\springboot-workspace\blogfriday\bin\main started by EZEN in D:\ai_chat\springboot-workspace\blogfriday)
+2024-04-01 16:17:38 [restartedMain] DEBUG com.blogfriday.ProjectApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-04-01 16:17:38 [restartedMain] INFO  com.blogfriday.ProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-01 16:17:40 [restartedMain] INFO  com.blogfriday.ProjectApplication - Started ProjectApplication in 2.193 seconds (process running for 3.031)
+2024-04-01 16:17:51 [http-nio-8090-exec-3] DEBUG c.b.p.m.P.insert - ==>  Preparing: INSERT INTO PaymentTransactions (method_id, transaction_date, is_successful, order_id, amount) VALUES (?, ?, ?, ?, ?)
+2024-04-01 16:17:51 [http-nio-8090-exec-3] DEBUG c.b.p.m.P.insert - ==> Parameters: 1(Integer), 2024-04-01T06:55:40.111Z(OffsetDateTime), false(Boolean), 123(Integer), 100.00(BigDecimal)

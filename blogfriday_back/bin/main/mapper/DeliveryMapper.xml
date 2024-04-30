@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogfriday.payment.repository.DeliveryRepository">
+    
+    
+    <resultMap id="deliveryResultMap" type="com.blogfriday.payment.dto.DeliveryDTO">
+        <id property="deliveryId" column="delivery_id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="currentStatus" column="current_status"/>
+        <result property="scheduledDeliveryDate" column="scheduled_delivery_date"/>
+        <result property="actualDeliveryDate" column="actual_delivery_date"/>
+        <result property="originalDeliveryAddress" column="original_delivery_address"/>
+        <result property="updatedDeliveryAddress" column="updated_delivery_address"/>
+        <result property="trackingNumber" column="tracking_number"/>
+    </resultMap>
+    
+    
+    <insert id="insert" parameterType="com.blogfriday.payment.dto.DeliveryDTO">
+        INSERT INTO Delivery (order_id, current_status, scheduled_delivery_date, actual_delivery_date, original_delivery_address, updated_delivery_address, tracking_number)
+        VALUES (#{orderId}, #{currentStatus}, #{scheduledDeliveryDate}, #{actualDeliveryDate}, #{originalDeliveryAddress}, #{updatedDeliveryAddress}, #{trackingNumber})
+    </insert>
+
+     <select id="selectByOrderId" parameterType="int" resultMap="deliveryResultMap">
+        SELECT * FROM Delivery WHERE order_id = #{orderId}
+    </select>
+
+    <update id="update" parameterType="com.blogfriday.payment.dto.DeliveryDTO">
+        UPDATE Delivery
+        SET current_status = #{currentStatus},
+            scheduled_delivery_date = #{scheduledDeliveryDate},
+            actual_delivery_date = #{actualDeliveryDate},
+            original_delivery_address = #{originalDeliveryAddress},
+            updated_delivery_address = #{updatedDeliveryAddress},
+            tracking_number = #{trackingNumber}
+        WHERE delivery_id = #{deliveryId}
+    </update>
+    
+     <delete id="delete" parameterType="int">
+        DELETE FROM Delivery WHERE delivery_id = #{deliveryId}
+    </delete>
+</mapper>

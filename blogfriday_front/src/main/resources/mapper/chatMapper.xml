@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.chat.repository.ChatMapper">
+
+	<insert id="insertFriend" parameterType="com.blogfriday.chat.dto.ChatDTO">
+		INSERT INTO friendlist (user_code1, user_code2)
+		VALUES (#{user_code1}, #{user_code2})
+	</insert>
+
+	<select id="friendList" resultType="com.blogfriday.chat.dto.ChatDTO">
+		SELECT *
+		FROM friendlist
+		WHERE user_code1 = #{user_code1}
+	</select>
+
+	<select id="selectFriendsByUserCode"
+		resultType="com.blogfriday.chat.dto.ChatUserDTO">
+		SELECT DISTINCT u.*
+		FROM user u
+		JOIN (
+		SELECT user_code2 AS user_code FROM friendlist WHERE user_code1 =
+		#{user_code1}
+		UNION
+		SELECT user_code1 AS user_code FROM friendlist WHERE user_code2 =
+		#{user_code1}
+		) AS friend_codes ON u.user_code = friend_codes.user_code
+		ORDER BY u.user_name ASC
+
+
+	</select>
+	
+	<select id="selecthistoryuser" parameterType="string"
+      resultType="com.blogfriday.chat.dto.ChatUserDTO">
+      SELECT * FROM user
+      WHERE user_id = #{user_id}
+   </select>
+
+	<delete id="deleteFriend">
+		DELETE FROM friendlist
+		WHERE user_code1 = #{user_code1} and user_code2 = #{user_code2}
+	</delete>
+
+	<!--유저존재검사-->
+	<select id="checkUserCodeExist"
+		resultType="int"
+		parameterType="String">
+		SELECT
+		CASE WHEN EXISTS (
+		SELECT 1 FROM user
+		WHERE user_code = #{userCode}
+		)
+		THEN 1
+		ELSE 0
+		END AS result
+	</select>
+
+
+	<!--중복성 검사-->
+	<select id="notSameFriend"
+		resultType="int"
+		parameterType="com.blogfriday.chat.dto.ChatDTO">
+		SELECT
+		CASE WHEN EXISTS (
+		SELECT 1 FROM friendlist
+		WHERE (user_code1 = #{user_code1} AND user_code2 = #{user_code2}) OR
+		(user_code1 = #{user_code2} AND user_code2 = #{user_code1})
+		)
+		THEN 1
+		ELSE 0
+		END AS result;
+	</select>
+	
+	<select id="friendListString" resultType="String">
+		SELECT user_code1
+		FROM friendlist
+		WHERE user_code2 = #{user_code1}
+	</select>
+	
+	
+	
+</mapper>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.product.repository.ProductRepository">
+ <!--   <select id="count" resultType="int">
+      SELECT count(*) FROM board
+   </select>
+
+   <select id="list" resultType="PageDetailDTO" parameterType="PageDTO">
+      SELECT b.* FROM board b
+	  ORDER BY b.ref DESC, b.re_step ASC
+	  LIMIT #{startRow}, #{blockCount}
+   </select>
+
+	
+
+   <select id="refPlus" resultType="int">
+      SELECT max(num)+1 FROM board
+   </select>
+
+   <update id="reStepCount" parameterType="PageDetailDTO">
+      UPDATE board
+      SET re_step = re_step +1
+      WHERE ref=#{ref} AND re_step > #{re_step}
+   </update>
+
+   
+
+   <update id="readCount" parameterType="int">
+      UPDATE board
+      SET readCount = readCount + 1
+      WHERE num=#{num}
+   </update>
+   
+   <select id="content" parameterType="int" resultType="PageDetailDTO">
+      SELECT * FROM board
+      WHERE num=#{num}
+   </select>
+   
+   
+   
+   -->
+</mapper>   

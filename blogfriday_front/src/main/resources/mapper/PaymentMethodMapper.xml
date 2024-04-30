@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogfriday.payment.repository.PaymentMethodRepository">
+
+	<resultMap id="paymentMethodResultMap"
+		type="com.blogfriday.payment.dto.PaymentMethodDTO">
+		<result property="methodId" column="method_id" />
+		<result property="methodName" column="method_name" />
+	</resultMap>
+
+	<select id="findAll" resultMap="paymentMethodResultMap">
+		SELECT * FROM PaymentMethods
+	</select>
+
+	<select id="findById" parameterType="int"
+		resultType="com.blogfriday.payment.dto.PaymentMethodDTO">
+		SELECT * FROM PaymentMethods WHERE method_id = #{methodId}
+	</select>
+
+	<insert id="insert" parameterType="com.blogfriday.payment.dto.PaymentMethodDTO">
+		INSERT INTO PaymentMethods (method_name) VALUES (#{methodName})
+	</insert>
+
+	<update id="update" parameterType="com.blogfriday.payment.dto.PaymentMethodDTO">
+		UPDATE PaymentMethods SET method_name = #{methodName} WHERE method_id =
+		#{methodId}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM PaymentMethods WHERE method_id = #{methodId}
+	</delete>
+
+</mapper>

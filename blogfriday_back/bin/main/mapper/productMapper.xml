@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.product.repository.ProductRepository">
+
+	<resultMap id="productResultMap"
+		type="com.blogfriday.product.dto.ProductDTO">
+		<result property="productCode" column="product_code" />
+		<result property="userId" column="user_id" />
+		<result property="categoryCode" column="category_code" />
+		<result property="productName" column="product_name" />
+		<result property="productPrice" column="product_price" />
+		<result property="productCount" column="product_count" />
+	</resultMap>
+
+	<select id="findAll" resultMap="productResultMap">
+		SELECT * FROM product
+	</select>
+
+	<select id="findById" resultMap="productResultMap" parameterType="int">
+		SELECT * FROM product WHERE product_code = #{product_code}
+	</select>
+
+	<insert id="saveProduct"
+		parameterType="com.blogfriday.product.dto.ProductDTO"
+		useGeneratedKeys="true"
+		keyProperty="product_code">
+		INSERT INTO product (user_id, category_code, product_name,
+		product_price, product_count, product_content_text)
+		VALUES (#{user_id}, #{category_code}, #{product_name}, #{product_price},
+		#{product_count}, #{product_content_text})
+	</insert>
+
+	<insert id="saveImgProduct"
+		parameterType="com.blogfriday.product.dto.ProductimgDTO">
+		INSERT INTO product_img (product_code, product_img0, product_img1)
+		VALUES (#{product_code}, #{product_img0}, #{product_img1})
+	</insert>
+
+	<update id="updateProduct"
+		parameterType="com.blogfriday.product.dto.ProductDTO">
+		UPDATE product
+		SET category_code = #{category_code},
+		product_name = #{product_name},
+		product_price = #{product_price},
+		product_count = #{product_count}
+		WHERE product_code = #{product_code}
+	</update>
+
+	<delete id="deleteProduct" parameterType="int">
+		DELETE
+		FROM product
+		WHERE product_code = #{product_code}
+	</delete>
+
+	<delete id="deleteProductImg" parameterType="int">
+		DELETE
+		FROM product_img
+		WHERE product_code = #{product_code}
+	</delete>
+
+	<select id="content" resultType="com.blogfriday.product.dto.ProductDTO"
+		parameterType="int">
+		SELECT *
+		FROM product
+		WHERE product_code = #{product_code}
+	</select>
+
+	<select id="contentImg"
+		resultType="com.blogfriday.product.dto.ProductimgDTO"
+		parameterType="int">
+		SELECT * FROM product_img WHERE product_code = #{product_code}
+	</select>
+
+	<select id="findProductCodeByName" resultType="Integer"
+		parameterType="string">
+		SELECT product_code
+		FROM product
+		WHERE product_name = #{productName}
+	</select>
+
+	<select id="searchlist" resultType="com.blogfriday.product.dto.ProductDTO"
+		parameterType="String">
+		SELECT *
+		FROM product
+		WHERE product_name LIKE CONCAT('%', #{product_name}, '%')
+		ORDER BY product_price ASC
+	</select>
+
+	<select id="searchcategorylist"
+		resultType="com.blogfriday.product.dto.ProductDTO"
+		parameterType="String">
+		SELECT
+		p.*
+		FROM
+		Product p
+		INNER JOIN
+		Category c ON p.category_code = c.category_code
+		WHERE
+		c.category_name = #{category_name}
+	</select>
+
+	<select id="sellerlist" resultType="com.blogfriday.product.dto.ProductDTO"
+		parameterType="int">
+		SELECT *
+		FROM product
+		WHERE user_id = #{user_id}
+	</select>
+
+	<select id="getProductNames" resultType="string">
+		SELECT product_name
+		FROM product
+	</select>
+
+	<select id="findSimilarProductNames"
+		resultType="com.blogfriday.product.dto.ProductDTO"
+		parameterType="string">
+		SELECT *
+		FROM product
+		WHERE product_name LIKE CONCAT('%', #{product_name}, '%')
+	</select>
+
+	<select id="findByProductCode" resultType="com.blogfriday.product.dto.ProductDTO">
+        SELECT * FROM product
+        WHERE  product_code = #{product_code}
+    </select>
+    
+    <select id="findByImgProductCode" resultType="com.blogfriday.product.dto.ProductimgDTO">
+        SELECT * FROM product_img
+        WHERE product_code = #{product_code}
+        
+    </select>
+    
+    <select id="findBySellerCode" resultType="com.blogfriday.product.dto.ProducthistoryDTO">
+        SELECT * FROM producthistory
+        WHERE user_id1 = #{user_id1}
+        
+    </select>
+    
+    <select id="findByBuyerCode" resultType="com.blogfriday.product.dto.ProducthistoryDTO">
+        SELECT * FROM producthistory
+        WHERE user_id2 = #{user_id2}
+        
+    </select>
+    
+    <insert id="saveProducthistory"
+        parameterType="com.blogfriday.product.dto.ProducthistoryDTO"
+        useGeneratedKeys="true"
+        keyProperty="history_code">
+    INSERT INTO producthistory (
+        product_code, product_name, category_code, product_price, product_count, 
+        user_id1, user_id2, user_code1, user_code2
+    ) VALUES (
+        #{product_code}, #{product_name}, #{category_code}, #{product_price}, #{product_count}, 
+        #{user_id1}, #{user_id2}, #{user_code1}, #{user_code2}
+    )
+</insert>
+    
+
+</mapper>
+   

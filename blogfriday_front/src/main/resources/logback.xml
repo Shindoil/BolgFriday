@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 콘솔 출력을 위한 Appender 설정 -->
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- 로그 메시지 형식 -->
+			<pattern>%-5level- %logger{36} - %red(%msg) %n
+			</pattern>
+		</encoder>
+		<!--<filter class="ch.qos.logback.classic.filter.LevelFilter">
+         <level>INFO</level>
+         <onMatch>ACCEPT</onMatch>
+         <onMismatch>DENY</onMismatch>
+      </filter>-->
+	</appender>
+
+
+	<!-- 로그 레벨과 Appender를 설정하는 로거 -->
+	<logger name="com.blogfriday" level="debug" additivity="false">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

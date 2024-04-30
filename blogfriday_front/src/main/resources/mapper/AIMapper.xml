@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.ai.repository.AIRepository">
+
+    <select id="getProductNames" resultType="string">
+        SELECT product_name
+        FROM product
+    </select>
+
+    <select id="searchProductsByName" resultType="com.blogfriday.product.dto.ProductDTO" parameterType="string">
+        SELECT *
+        FROM product
+        WHERE product_name = #{productName}
+        ORDER BY product_price ASC
+    </select>
+
+    <select id="findSimilarProductNames" resultType="com.blogfriday.product.dto.ProductDTO" parameterType="string">
+        SELECT *
+        FROM product
+        WHERE product_name LIKE CONCAT('%', #{productName}, '%')
+    </select>
+
+</mapper>

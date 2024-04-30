@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.cart.repository.CartRepository">
+
+   <resultMap id="cartResultMap" type="com.blogfriday.cart.dto.CartDTO">
+      <id property="cartproductcode" column="cart_product_code" />
+      <result property="productcode" column="product_code" />
+      <result property="cartproductcount" column="cart_product_code" />
+      <result property="userid" column="user_id" />
+
+      <!-- <result property="productimg0" column="product_img0"/>
+        <result property="productimg1" column="product_img1"/>
+        <result property="productimg2" column="product_img2"/>-->
+
+   </resultMap>
+   <!-- CartItemDTO를 위한 resultMap 정의 -->
+   <resultMap id="cartItemResultMap" type="com.blogfriday.cart.dto.CartItemDTO">
+      <id property="cart_product_code" column="cart_product_code" />
+      <result property="cart_product_count" column="cart_product_count" />
+      <result property="user_id" column="user_id" />
+
+      <!-- Include association for product -->
+      <association property="product"
+         javaType="com.blogfriday.cart.dto.ProductDTO">
+         <id property="product_code" column="product_code" />
+         <result property="product_name" column="product_name" />
+         <result property="product_price" column="product_price" />
+         <result property="product_color" column="product_color" />
+         <result property="product_size" column="product_size" />
+         <result property="product_content_text"
+            column="product_content_text" />
+      </association>
+   </resultMap>
+
+   <select id="findAll" resultType="com.blogfriday.cart.dto.CartDTO">
+      SELECT * FROM Cart
+   </select>
+
+   <select id="findAllByUserId" parameterType="int"
+      resultMap="cartItemResultMap">
+      SELECT c.cart_product_code, c.cart_product_count, c.user_id,
+      p.product_code, p.product_name, p.product_price
+      FROM Cart c
+      INNER JOIN Product p ON c.product_code = p.product_code
+      WHERE c.user_id = #{userId}
+   </select>
+
+   <select id="findByCode" parameterType="int"
+      resultType="com.blogfriday.cart.dto.CartDTO">
+      SELECT * FROM cart
+      WHERE cart_product_code = #{cartproductcode}
+   </select>
+
+   <select id="searchCartList" resultType="com.blogfriday.cart.dto.CartItemDTO"
+      parameterType="int">
+      SELECT c.cart_product_code, c.product_code, c.cart_product_count,
+      c.user_id, p.product_code, p.product_name, p.product_price,
+      p.product_color, p.product_size, p.product_content_text
+      FROM Cart c
+      INNER JOIN Product p ON c.product_code = p.product_code
+      WHERE c.user_id = #{user_id}
+   </select>
+
+   <select id="content" resultType="com.blogfriday.cart.dto.CartDTO"
+      parameterType="int">
+      SELECT *
+      FROM cart
+      WHERE product_code = #{product_code}
+   </select>
+
+   <select id="contentImg"
+      resultType="com.blogfriday.cart.dto.CartimgDTO"
+      parameterType="int">
+      SELECT c.cart_product_code, c.product_code, c.cart_product_count,
+      c.user_id, p.product_img0
+      FROM cart c INNER JOIN product_img p
+      ON c.product_code = p.product_code
+      WHERE c.product_code = #{c.product_code}
+   </select>
+
+   <insert id="insert" parameterType="com.blogfriday.cart.dto.CartDTO">
+      INSERT INTO cart
+      (product_code, cart_product_count, user_id)
+      VALUES(#{product_code}, #{cart_product_count}, #{user_id})
+   </insert>
+
+   <update id="update" parameterType="com.blogfriday.cart.dto.CartDTO">
+      UPDATE cart
+      SET cart_product_count = #{cart_product_count}
+         
+          WHERE cart_product_code=#{cart_product_code}
+   </update>
+
+   <delete id="delete" parameterType="int">
+      DELETE FROM cart
+      WHERE cart_product_code = #{cart_product_code}
+   </delete>
+
+
+
+</mapper>   

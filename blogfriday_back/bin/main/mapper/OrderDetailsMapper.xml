@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.payment.repository.OrderDetailsRepository">
+
+    <resultMap id="OrderDetailsResultMap" type="com.blogfriday.payment.dto.OrderDetailsDTO">
+        <id property="orderdetailId" column="orderdetail_id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="productCode" column="product_code"/>
+        <result property="productQuantity" column="product_quantity"/>
+        <result property="priceatPurchase" column="priceat_purchase"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="OrderDetailsResultMap">
+        SELECT * FROM OrderDetails
+    </select>
+
+    <select id="findById" parameterType="int" resultMap="OrderDetailsResultMap">
+        SELECT * FROM OrderDetails WHERE orderdetail_id = #{orderDetailId}
+    </select>
+
+    <insert id="insert" parameterType="com.blogfriday.payment.dto.OrderDetailsDTO">
+        INSERT INTO OrderDetails (order_id, product_code, product_quantity, priceat_purchase)
+        VALUES (#{orderId}, #{productCode}, #{productQuantity}, #{priceatPurchase})
+    </insert>
+
+    <update id="update" parameterType="com.blogfriday.payment.dto.OrderDetailsDTO">
+        UPDATE OrderDetails
+        SET order_id = #{orderId},
+            product_code = #{productCode},
+            product_quantity = #{productQuantity},
+            priceat_purchase = #{priceatPurchase}
+        WHERE orderdetail_id = #{orderdetailId}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM OrderDetails WHERE orderdetail_id = #{orderDetailId}
+    </delete>
+
+</mapper>

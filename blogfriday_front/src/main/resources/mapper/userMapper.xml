@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.user.repository.UserRepository">
+   <!-- 회원가입 -->
+   <insert id="insertUser"
+      parameterType="com.blogfriday.user.dto.BlogFridayUserDTO">
+        <![CDATA[
+        INSERT INTO user(user_idemail, user_state, user_name, user_nickname, user_phonenumber, user_password, user_profile, user_code, user_findhome, user_findname)
+        VALUES(#{user_idemail}, #{user_state}, #{user_name}, #{user_nickname}, #{user_phonenumber}, #{user_password}, #{user_profile}, #{user_code}, #{user_findhome},#{user_findname})
+        ]]>
+    </insert>
+
+   <!-- 회원정보 가져오기-->
+   <select id="selectByEmail" parameterType="string"
+      resultType="com.blogfriday.user.dto.BlogFridayUserDTO">
+      SELECT * FROM user
+      WHERE user_idemail = #{user_idemail}
+   </select>
+
+
+   <!-- 회원 정보 수정-->
+   <update id="updateUser"
+      parameterType="com.blogfriday.user.dto.BlogFridayUserDTO">
+      UPDATE user
+      SET user_password=#{user_password}, user_name=#{user_name},
+      user_phonenumber=#{user_phonenumber}, user_nickname=#{user_nickname},
+      user_profile=#{user_profile}
+      WHERE user_idemail=#{user_idemail}
+   </update>
+
+
+   <!-- 회원탈퇴-->
+   <delete id="deleteUser" parameterType="string">
+      DELETE FROM user
+      WHERE user_idemail = #{user_idemail}
+   </delete>
+
+   <!-- 판매 허가 state 변경-->
+   <update id="updateUserState"
+      parameterType="int">
+      UPDATE user
+      SET user_state = 2
+      WHERE user_id = #{user_id}
+   </update>
+
+   <!-- 이메일 중복체크 -->
+   <select id="isUserExists" parameterType="string" resultType="int">
+      SELECT COUNT(*) FROM user WHERE user_idemail = #{user_idemail}
+   </select>
+
+    <!-- 아이디 찾기-->
+   <select id="FindID"
+      parameterType="com.blogfriday.user.dto.BlogFridayUserDTO"
+      resultType="string">
+      SELECT user_idemail FROM user
+      WHERE
+      user_name = #{user_name}
+      AND user_phonenumber = #{user_phonenumber}
+      AND user_findhome = #{user_findhome}
+      AND user_findname = #{user_findname}
+   </select>
+
+    <!-- 비밀번호를 변경하기 위해 인증-->
+    <select id="Okuser" parameterType="com.blogfriday.user.dto.BlogFridayUserDTO" resultType="int">
+   SELECT 
+    CASE 
+        WHEN COUNT(*) > 0 THEN 1 
+        ELSE 0 
+    END AS result
+    FROM user
+    WHERE 
+    user_idemail = #{user_idemail} 
+    AND user_name = #{user_name} 
+    AND user_phonenumber = #{user_phonenumber} 
+    AND user_findhome = #{user_findhome} 
+    AND user_findname = #{user_findname}
+   </select>
+   
+   <!-- 비밀번호 변경-->
+   <update id="updateByPass" parameterType="com.blogfriday.user.dto.BlogFridayUserDTO">
+    UPDATE user SET user_password=#{user_password}
+    WHERE user_idemail = #{user_idemail}
+</update>
+
+</mapper>

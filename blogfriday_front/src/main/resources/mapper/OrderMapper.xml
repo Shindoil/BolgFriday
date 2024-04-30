@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogfriday.payment.repository.OrderRepository">
+
+	<resultMap id="orderResultMap" type="com.blogfriday.payment.dto.OrderDTO">
+		<result property="orderId" column="order_id" />
+		<result property="userId" column="user_id" />
+		<result property="orderDate" column="order_date" />
+		<result property="orderAddress" column="order_address" />
+		<result property="orderAmount" column="order_amount" />
+	</resultMap>
+
+	<select id="findAll" resultMap="orderResultMap">
+		SELECT * FROM Orders
+	</select>
+
+	<select id="findById" resultMap="orderResultMap" parameterType="int">
+		SELECT * FROM Orders WHERE order_id = #{orderId}
+	</select>
+
+
+	<insert id="insert" parameterType="com.blogfriday.payment.dto.OrderDTO">
+		INSERT INTO Orders (user_id, order_date, order_address, order_amount)
+		VALUES (#{userId}, #{orderDate}, #{orderAddress}, #{orderAmount})
+	</insert>
+
+	<update id="update" parameterType="com.blogfriday.payment.dto.OrderDTO">
+		UPDATE Orders
+		SET user_id = #{userId}, order_date = #{orderDate}, order_address =
+		#{orderAddress}, order_amount = #{orderAmount}
+		WHERE order_id = #{orderId}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM Orders WHERE order_id = #{orderId}
+	</delete>
+
+</mapper>

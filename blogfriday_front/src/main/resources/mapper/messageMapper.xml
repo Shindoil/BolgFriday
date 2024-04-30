@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blogfriday.chat.repository.MessageMapper">
+
+	
+	
+	<insert id="insertMessage" parameterType="com.blogfriday.chat.dto.MessageDto">
+        INSERT INTO message (sender_id, recipient_id, message)
+        VALUES (#{sender_id}, #{recipient_id}, #{message})
+    </insert>
+
+    <select id="findMessagesByRecipientId" resultType="com.blogfriday.chat.dto.MessageDto">
+        SELECT *
+        FROM message
+        WHERE recipient_id = #{recipient_id} or sender_id = #{recipient_id}
+    </select>
+
+    <delete id="deleteMessageByDate" parameterType="string">
+        DELETE FROM message
+        WHERE timestamp = #{timestamp}
+    </delete>
+
+	<update id="isread" parameterType="map">
+		UPDATE message
+        SET is_read = TRUE
+        WHERE recipient_id = #{sender_id} AND sender_id = #{recipient_id} AND is_read = FALSE
+	</update>
+
+</mapper>

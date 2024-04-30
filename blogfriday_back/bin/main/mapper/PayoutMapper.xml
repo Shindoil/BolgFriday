@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blogfriday.payment.repository.PayoutRepository">
+
+    <resultMap id="payoutResult" type="com.blogfriday.payment.dto.PayoutDTO">
+        <result property="payoutId" column="payout_id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="amount" column="amount"/>
+        <result property="payoutDate" column="payout_date"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="payoutResult">
+        SELECT * FROM Payouts
+    </select>
+
+    <select id="findById" parameterType="int" resultMap="payoutResult">
+        SELECT * FROM Payouts WHERE payout_id = #{payoutId}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="payoutId">
+        INSERT INTO Payouts (order_id, amount, payout_date)
+        VALUES (#{orderId}, #{amount}, #{payoutDate})
+    </insert>
+
+    <update id="update" parameterType="com.blogfriday.payment.dto.PayoutDTO">
+        UPDATE Payouts
+        SET order_id = #{orderId}, amount = #{amount}, payout_date = #{payoutDate}
+        WHERE payout_id = #{payoutId}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM Payouts WHERE payout_id = #{payoutId}
+    </delete>
+
+</mapper>
