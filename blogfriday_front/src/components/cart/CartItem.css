@@ -1,0 +1,225 @@
+.cart_container {
+  width: 60%;
+  min-height: 100vh;
+}
+.horizenline2 {
+  margin-top: 20px;
+}
+.horizenline {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+/* 체크박스 */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-input:checked + .checkbox-custom::after {
+  display: block;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.checkbox-label:hover .checkbox-custom {
+  background-color: #f0f0f0;
+}
+
+/* ---------------------------- */
+
+/* 결제 박스 스타일 */
+.checkout-box {
+  position: fixed; /* 박스를 화면 위에 고정합니다. */
+  bottom: -2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px; /* 박스 너비를 설정합니다. */
+  height: 120px;
+  background-color: #f5f1f1; /* 박스 배경색을 설정합니다*/
+  border-bottom: 6px solid rgba(236, 236, 237, 0.788);
+  border-right: 6px solid rgba(236, 236, 237, 0.788);
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-box_f {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.checkout-box_w {
+  font-size: 21px;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+.checkout-box_b {
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 799px) {
+  .checkout-box {
+    position: fixed; /* 박스를 화면 위에 고정합니다. */
+    /* top: 86%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+    width: 600px; /* 박스 너비를 설정합니다. */
+    height: 150px;
+    background-color: #f5f1f1; /* 박스 배경색을 설정합니다*/
+    border-bottom: 6px solid rgba(236, 236, 237, 0.788);
+    border-right: 6px solid rgba(236, 236, 237, 0.788);
+  }
+}
+
+.cart_container {
+  width: 100%;
+
+  /* margin: auto;
+  padding: 20px; */
+}
+
+.cart_item {
+  width: 100%;
+  margin-bottom: 100px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  display: flex; /* Flexbox를 사용하여 요소를 수평으로 배치합니다. */
+  align-items: center; /* 요소들을 세로 중앙 정렬합니다. */
+}
+.cart_item_box {
+  width: 100%;
+  height: 900px;
+  overflow: auto;
+}
+
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-custom {
+  width: 20px; /* 체크박스의 너비를 설정합니다. */
+  height: 20px; /* 체크박스의 높이를 설정합니다. */
+  border: 1px solid #000; /* 체크박스의 테두리를 설정합니다. */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터로 변경합니다. */
+  background-color: #fff; /* 체크박스의 배경색을 설정합니다. */
+  position: relative; /* 체크박스를 상대적으로 설정합니다. */
+}
+
+/* 체크박스가 체크됐을 때 */
+.checkbox-input:checked + .checkbox-custom::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid #007bff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-label {
+  font-size: 1rem; /* 체크박스 레이블의 폰트 크기를 설정합니다. */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터로 변경합니다. */
+}
+
+.checkbox-label:hover .checkbox-custom {
+  background-color: #f0f0f0; /* 체크박스 배경색을 설정합니다. */
+}
+
+.font {
+  font-size: 30px;
+  /* font-style: italic; */
+  margin-bottom: 10px;
+}
+
+.font2 {
+  font-size: 20px;
+  /* font-family: "Courier New", Monaco, monospace; */
+  /* font-style: normal; */
+}
+
+imgposition {
+  background-position: left center;
+}
+
+.cart_item img {
+  margin-right: 20px; /* 이미지와 텍스트 사이의 간격을 설정합니다. */
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}
+
+/* 수량 버튼 커스텀 */
+/* 제품 수량 버튼 */
+.product_amount_b {
+  display: flex; /* Flexbox 사용 설정 */
+  width: 100px; /* 너비 */
+  height: 50px; /* 높이 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  border: 1px solid gray; /* 테두리 스타일 */
+}
+
+/* 수량 감소 버튼 */
+.amount_bp {
+  width: 50px; /* 너비 */
+  height: 40px; /* 높이 */
+  font-size: 35px; /* 글자 크기 */
+  display: flex; /* Flexbox 사용 설정 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-bottom: 10px; /* 아래쪽 여백 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+}
+
+/* 수량 추가 버튼 */
+.amount_ba {
+  width: 50px; /* 너비 */
+  height: 50px; /* 높이 */
+  font-size: 35px; /* 글자 크기 */
+  display: flex; /* Flexbox 사용 설정 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  cursor: pointer;
+}
+
+/* 수량 최소화 버튼 */
+.amount_bm {
+  width: 50px; /* 너비 */
+  height: 40px; /* 높이 */
+  font-size: 45px; /* 글자 크기 */
+  display: flex; /* Flexbox 사용 설정 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-bottom: 10px; /* 아래쪽 여백 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+}
+
+.TextBox {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  transform: translate(-10%, -70%);
+}
+
+.menu_btn {
+  width: 50%;
+  height: 100px;
+  transform: translate(150%, -180%);
+  margin: left;
+}

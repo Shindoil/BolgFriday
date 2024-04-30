@@ -1,0 +1,158 @@
+@media only screen and (min-width: 800px) {
+  /* EditInfo component styles */
+  .chat_body {
+    position: relative; /* Chatbody를 상대 위치로 설정 */
+  }
+
+  .editinfo-form-container {
+    max-width: 100%; /* 폼의 최대 너비를 설정 */
+  }
+
+  .editinfo-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .editinfo-form-group-img {
+  }
+  .editinfo-form-group {
+    margin-bottom: 15px;
+  }
+
+  .editinfo-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .editinfo-profile-image-preview {
+    width: 200px; /* 프로필 이미지 크기 */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px; /* 둥근 모서리 */
+    margin-bottom: 10px;
+    border: 2px solid #007bff; /* 테두리 스타일 */
+  }
+
+  .ditinfo-btn btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #30e9f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .editinfo-btn:hover {
+    background-color: #adda31;
+  }
+
+  .editinfo-form-group-prevbox {
+    display: flex;
+    margin-top: 30px;
+  }
+  .infotexth {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .infotext {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 799px) {
+  /* EditInfo component styles */
+  .chat_body {
+    position: relative; /* Chatbody를 상대 위치로 설정 */
+  }
+
+  .editinfo-form-container {
+    max-width: 100%; /* 폼의 최대 너비를 설정 */
+    border: 1px solid #ddd;
+    position: absolute; /* 절대 위치 설정 */
+  }
+
+  .editinfo-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .editinfo-form-group-img {
+  }
+  .editinfo-form-group-prevbox {
+    display: flex;
+  }
+  .editinfo-form-group-prevbox2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px; /* 왼쪽 패딩 추가 */
+    padding-right: 10px;
+  }
+  .editinfo-form-group {
+    margin-bottom: 15px;
+  }
+  .infotexth {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .infotext {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .editinfo-btn-edit {
+    width: 50%;
+    height: 50px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+  }
+
+  .editinfo-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .editinfo-profile-image-preview {
+    width: 200px; /* 프로필 이미지 크기 */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px; /* 둥근 모서리 */
+    margin-bottom: 10px;
+    border: 2px solid #007bff; /* 테두리 스타일 */
+  }
+
+  .ditinfo-btn btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #30e9f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .editinfo-btn:hover {
+    background-color: #adda31;
+  }
+}

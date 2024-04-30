@@ -1,0 +1,56 @@
+/* FindPass.css */
+
+.find-pass-container {
+  width: 400px; /* 너비를 더 넓게 조정 */
+  margin: auto; /* 수평 가운데 정렬 */
+  margin-top: 200px; /* 페이지 맨 위에서 내려갈 거리 지정 */
+  padding: 60px; /* 패딩을 추가하여 내용물과의 간격을 늘림 */
+  border: 2px solid #ccc; /* 테두리 추가 */
+  border-radius: 10px; /* 테두리 모서리를 둥글게 만듦 */
+  background-color: #f9f9f9; /* 배경색 지정 */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.find-pass-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 30px; /* 간격을 더 넓게 조정 */
+}
+
+label {
+  margin-bottom: 10px; /* 간격을 더 넓게 조정 */
+  font-size: 18px; /* 폰트 크기 조정 */
+  color: #333; /* 글자색 변경 */
+}
+
+input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 2px solid #ccc; /* 테두리 스타일 변경 */
+  width: 100%;
+  font-size: 16px;
+}
+
+button {
+  padding: 16px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* 호버 효과에 대한 전이 추가 */
+}
+
+button:hover {
+  background-color: #ff4d4d; /* 호버 시 색상 변경 */
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px; /* 간격을 더 넓게 조정 */
+  font-size: 16px; /* 폰트 크기 조정 */
+}

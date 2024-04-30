@@ -1,0 +1,99 @@
+/* .temp_shop {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.chat_home {
+  width: 700px;
+  height: 1000px;
+  background-color: antiquewhite;
+}
+
+.blank0 {
+  width: 50px;
+  height: 50px;
+}
+
+.chat_home_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+}
+.chat_user {
+  width: 600px;
+  height: 100px;
+}
+
+.chat_home_body {
+  display: flex;
+  width: 700px;
+  height: 1000px;
+}
+
+.chat_name {
+  position: relative;
+  left: 60px;
+  font-weight: bold;
+}
+.chat_menubar {
+  width: 100px;
+  height: 1000px;
+  background-color: rgb(236, 236, 237);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chat_menubar_button_f {
+  width: 35px;
+  height: 35px;
+  margin: 10px 0;
+  background-image: url("/public/basicicon/userwhite.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.chat_menubar_button_c {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  background-image: url("/public/basicicon/chat1.png");
+  background-size: cover;
+  cursor: pointer;
+  top: 10px;
+}
+
+.chat_profileimg {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  left: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.chat_friendlist {
+  background-color: white;
+  overflow-y: auto;
+}
+
+.chat_friendbox {
+  display: flex;
+  width: 600px;
+  height: 100px;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+.chat_friendbox:hover {
+  background-color: rgb(236, 236, 237);
+} */

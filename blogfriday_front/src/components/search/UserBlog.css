@@ -1,0 +1,126 @@
+/* ******************************************************** */
+/* 헤더, 로고, 검색바, 장바구니 스타일링 */
+
+/* ******************************************************** */
+/* 네비게이션 메뉴 스타일링 */
+
+.base-layout {
+  /* background-color: skyblue; */
+}
+/* 메인 배너 스타일링 */
+.main-banner {
+  /* background-color: red; */
+  width: 1200px;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.blogbanner-img {
+  background-image: url("/public/images/blogbanner.png");
+  width: 900px;
+  height: 750px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+/* 푸터 스타일링 */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+.cardlist {
+  position: relative; /* 상대적 위치의 기준점 */
+  width: 1000px;
+  height: 700px;
+  /* background-color: beige; */
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.card {
+  position: absolute; /* 절대 위치 */
+  width: 500px; /* 여백 고려하여 너비 계산 */
+  height: 300px; /* 여백 고려하여 높이 계산 */
+  display: flex;
+  justify-content: center; /* 가로축 중앙 정렬 */
+  flex-direction: column;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.card-img {
+  width: 400px; /* 여백 고려하여 너비 계산 */
+  height: 300px; /* 여백 고려하여 높이 계산 */
+  /* background-color: red; */
+  position: relative; /* 상대 위치 설정 */
+  background-size: cover;
+  /* background-size: contain; 이미지가 컨테이너에 맞게 조절되되, 비율을 유지 */
+  background-repeat: no-repeat; /* 이미지가 반복되지 않도록 */
+  background-position: center; /* 이미지를 컨테이너 중앙에 위치 */
+  cursor: pointer;
+}
+
+.card-info {
+  position: relative; /* 상대 위치 설정 */
+  width: 400px; /* 여백 고려하여 너비 계산 */
+  height: 80px;
+  background-size: contain; /* 이미지가 컨테이너에 맞게 조절되되, */
+  background-position: center; /* 이미지를 컨테이너 중앙에 위치 */
+  /* background-color: skyblue; */
+  font-size: 30px;
+}
+
+/* 각 카드의 위치 지정 */
+.card:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.card:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.card:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.card:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.card:nth-child(1) .card-img {
+  top: 10;
+  left: 0;
+  background-image: url("/public/images/img01.png");
+}
+
+/* 두 번째 .card의 .card-img에 스타일 적용 */
+.card:nth-child(2) .card-img {
+  top: 10;
+  left: 0;
+  background-image: url("/public/images/blogimg1.png");
+}
+
+/* 세 번째 .card의 .card-img에 스타일 적용 */
+.card:nth-child(3) .card-img {
+  background-image: url("/public/images/blogimg2.png");
+}
+/* /public/shopimg/37_product_img0_KakaoTalk_20240328_145254292.png */
+/* /public/images/blogimg2.png */
+/* 네 번째 .card의 .card-img에 스타일 적용 */
+.card:nth-child(4) .card-img {
+  background-image: url("/public/images/blogimg3.png");
+}

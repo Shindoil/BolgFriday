@@ -1,0 +1,158 @@
+.head {
+  height: 50px;
+  margin: 0 auto;
+  background-color: brown;
+}
+
+.save {
+  width: 100%;
+  height: 1800px;
+  /* background-color: antiquewhite; */
+  border: 2px solid rgb(192, 192, 192);
+}
+.save_t {
+  width: 50%;
+  height: 140px;
+  font-size: 18px;
+}
+
+.save_inputbox_input {
+  width: 100%;
+  height: 10px;
+  margin: 2px;
+}
+.productcontentbox_is {
+  width: 1200px;
+  height: 1400px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveinput {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  margin-top: 40px;
+}
+
+.category_box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 25%;
+  height: 270px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* 내부 여백 추가 */
+}
+.save_form_box {
+  width: 70%;
+  height: 270px;
+}
+
+.category_box button {
+  color: black; /* 흰색 글자 */
+  font-weight: bold;
+  border: none; /* 테두리 없음 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  cursor: pointer; /* 커서 변경 */
+  font-size: 13px; /* 글꼴 크기 */
+  padding: 10px 20px; /* 패딩 */
+}
+.category_box button.active {
+  background-color: gray; /* Active button background */
+  color: white; /* Active button text color */
+}
+.savecontextinputbox {
+  display: flex;
+  width: 100%;
+}
+.save_inputbody {
+  display: flex;
+  width: 70%; /* 너비를 100%로 설정 */
+}
+.save_inputbox {
+  display: flex;
+  flex-direction: column; /* Flexbox 방향을 세로로 설정 */
+  width: 50%; /* 너비를 60%로 설정 */
+}
+.save_file {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center;
+}
+
+.save_inputimg {
+  display: flex;
+}
+.save_inputimg_d {
+}
+.save_input_text {
+  width: 100%;
+  display: flex;
+  font-size: 17px;
+  font-weight: bold;
+}
+.savesubmit_btn {
+}
+.savepreview {
+  width: 100%;
+  height: 1400px;
+  /* background-color: bisque; */
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  flex-direction: column; /* 위에서 아래로 나열 */
+  overflow: scroll;
+}
+.savepreview_topbox {
+  display: flex;
+  /* background-color: aliceblue; */
+}
+.savepreview_text {
+  width: 400px;
+  height: 400px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+.savepreview_img0 {
+  display: flex; /* Flexbox를 활성화하여 내부 요소를 중앙 정렬하기 위함 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-weight: bold; /* 폰트 볼드체 */
+  font-size: 40px; /* 폰트 크기 40px */
+  width: 400px; /* 너비 400px */
+  height: 400px; /* 높이 400px */
+  margin-top: 10px; /* 상단 여백 10px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 박스 그림자 효과 */
+  object-fit: contain;
+}
+
+.savepreview_img1 {
+  width: 900px;
+  height: 900px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flexbox를 활성화하여 내부 요소를 중앙 정렬하기 위함 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-weight: bold; /* 폰트 볼드체 */
+  font-size: 40px; /* 폰트 크기 40px */
+}
+.savepreview_img0 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.savepreview_img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

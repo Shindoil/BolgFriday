@@ -1,0 +1,134 @@
+/* 기본 스타일 */
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #f2f6f9;
+}
+
+/* 회원가입 제목 */
+.join-add-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 48px;
+  color: #3498db;
+  text-transform: uppercase;
+}
+
+/* 회원가입 컨테이너 */
+.join-add-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  position: relative; /* 부모 요소를 상대적으로 위치시킴 */
+}
+
+/* 회원가입 폼 */
+.join-add-form {
+  max-width: 700px;
+  width: 100%;
+  padding: 60px;
+  border: 2px solid #ced4da;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* 회원가입 폼 제목 */
+.join-add-form-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* 회원가입 폼 그룹 */
+.join-add-form-group {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* 회원가입 폼 아이콘 */
+.join-add-form-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* 회원가입 폼 입력 컨트롤 */
+.join-add-form-control {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #ced4da;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/* 회원가입 프로필 미리보기 */
+.join-add-profile-preview {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+/* 버튼 */
+.btn {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* 기본 버튼 */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6269;
+}
+
+/* 주요 버튼 */
+.join-add-btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.join-add-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* 에러 메시지 */
+.error-message {
+  color: #dc3545;
+  font-size: 18px;
+}
+
+/* 가입 성공 메시지 */
+.joinadd-message {
+  color: #28a745;
+  font-size: 20px;
+  margin-top: 20px; /* 입력 컨트롤 아래에 위치하도록 추가 */
+}
+
+/* 반응형 디자인 (모바일) */
+@media (max-width: 768px) {
+  .join-add-form {
+    width: 90%;
+  }
+
+  .join-add-form-group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,140 @@
+.order-form {
+  width: 800px;
+  margin: 0 auto 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.order-form h2 {
+  text-align: center;
+  margin: 30px 0 50px 0;
+}
+
+.order-details {
+  margin-bottom: 30px;
+}
+
+.order-details > div {
+  font-size: 1.5rem;
+}
+
+.order-details .store-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.order-details .order-info {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.order-menu {
+  margin-bottom: 30px;
+}
+
+.order-menu li {
+  position: relative;
+}
+
+.order-menu li div,
+.price div,
+.total div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-menu li .menu-price,
+.price div span:last-child,
+.total div span:last-child {
+  position: relative;
+  right: 0;
+}
+
+.order-menu li ul li {
+  font-size: 1.5rem;
+  list-style: disc;
+  margin-left: 20px;
+  color: #a5a5a5;
+}
+
+.order-menu li ul li.menu-price-sum {
+  list-style: none;
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+
+.price {
+  margin-bottom: 30px;
+}
+
+.price div {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.total {
+  margin-bottom: 30px;
+}
+
+.total div {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.address li {
+  color: #a5a5a5;
+}
+
+/* 버튼 스타일 */
+button.order-button {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 35%;
+}
+
+button.order-button:hover {
+  background-color: #ff4d4d;
+}
+
+button.order-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.paymentMethod_box {
+  display: flex;
+  justify-content: space-between; /* 양쪽에 아이템 배치 */
+  align-items: center; /* 세로 중심 정렬 */
+  justify-content: space-evenly;
+}
+.paymentMethod_boxi {
+  display: flex;
+  /* background-color: #ff4d4d;s */
+}
+.paymenticorn {
+  width: 50px;
+  height: 50px;
+}
+.inputsize {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .order-form {
+    width: 95%;
+  }
+  .detail-box {
+    margin: 0 auto;
+  }
+}

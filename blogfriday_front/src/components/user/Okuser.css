@@ -1,0 +1,59 @@
+/* OKUser.css */
+.okuser-container {
+  max-width: 1000px; /* 최대 너비를 더 넓게 조정 */
+  margin: 50px auto; /* 상단 여백을 추가하여 화면 상단으로 이동 */
+  padding: 40px; /* 내용물과의 간격을 늘림 */
+  border: 2px solid #ccc; /* 테두리 추가 */
+  border-radius: 10px; /* 테두리 모서리를 둥글게 만듦 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  background-color: #fff; /* 흰 배경 */
+}
+
+.okuser-title {
+  margin-bottom: 40px; /* 간격을 더 넓게 조정 */
+  font-size: 2.5rem; /* 폰트 크기를 더 크게 조정 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.okuser-form-group {
+  margin-bottom: 10px; /* 간격을 더 넓게 조정 */
+}
+
+.okuser-label {
+  display: block;
+  margin-bottom: 20px; /* 간격을 더 넓게 조정 */
+  font-weight: bold;
+  font-size: 1rem; /* 폰트 크기를 더 크게 조정 */
+}
+
+.okuser-input {
+  width: 100%;
+  padding: 18px; /* 내용물을 더 크게 조정 */
+  font-size: 1.2rem; /* 폰트 크기를 더 크게 조정 */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.okuser-btn {
+  display: block;
+  width: 100%;
+  padding: 18px; /* 내용물을 더 크게 조정 */
+  font-size: 1.2rem; /* 폰트 크기를 더 크게 조정 */
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.okuser-btn:hover {
+  background-color: #ff4d4d;
+}
+
+.okuser-error {
+  margin-top: 30px; /* 간격을 더 넓게 조정 */
+  color: #dc3545;
+  font-size: 1.2rem; /* 폰트 크기를 더 크게 조정 */
+  text-align: center; /* 가운데 정렬 */
+}

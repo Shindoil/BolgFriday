@@ -1,0 +1,565 @@
+@media only screen and (min-width: 800px) {
+  .detail_go_buy {
+    width: 100px;
+    height: 50px;
+    background-color: #007bff; /* 예시 배경색 */
+    color: white; /* 버튼 내 텍스트 색상 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 10px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+  }
+  .headline {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .detailbody {
+    width: 750px;
+    height: 2200px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productbox {
+    width: 750px;
+    height: 750px;
+    /* background-color: #0056b3; */
+    display: flex; /* Flexbox 사용 설정 */
+    flex-direction: column; /* 요소들을 세로로 나열 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: flex-start;
+  }
+
+  .product_detail_img {
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    width: 750px;
+    height: 750px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .product_context_box {
+    width: 750px;
+    height: 300px;
+  }
+
+  .product_context_box_pname {
+    font-size: 25px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    font-weight: bold;
+  }
+
+  .product_context_box_pprice {
+    font-size: 35px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    font-weight: bold;
+  }
+
+  .product_context_box_pprice_s {
+    font-size: 20px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+  }
+
+  .product_context_box_pcontext {
+    font-size: 20px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+  }
+  .product_amount_b {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    justify-content: center; /* 왼쪽 정렬 */
+    align-items: center;
+    border: 1px solid gray;
+  }
+  .amount_bp {
+    width: 50px;
+    height: 40px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .amount_ba {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+  }
+  .amount_bm {
+    width: 50px;
+    height: 40px;
+    font-size: 45px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .product_amount {
+    width: 100%;
+    height: 70px;
+    display: flex;
+  }
+  .amount_cal {
+    font-size: 35px;
+    font-weight: bold;
+
+    display: flex;
+  }
+
+  .productcontentbox {
+    width: 750px;
+    height: 700px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productcontentbox_i {
+    width: 750px;
+    height: 1000px;
+  }
+
+  .buy:hover {
+    background-color: #0056b3; /* 호버 시 배경색 변경 */
+  }
+
+  .detail_go_cart {
+    width: 100px;
+    height: 50px;
+    background-color: #b64e09; /* 예시 배경색 */
+    color: white; /* 버튼 내 텍스트 색상 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 10px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+  }
+
+  .cart:hover {
+    background-color: red; /* 호버 시 배경색 변경 */
+  }
+
+  /* 메뉴바 스타일 */
+  .menu-bar {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 연한 검은색 테두리 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    background-color: #fff; /* 배경색 추가, 필요한 경우 조정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+    /* 기타 스타일 */
+    display: flex;
+    flex-direction: column; /* 아이템을 가로로 배치 */
+    align-items: center; /* 세로축(center)에서 아이템을 중앙 정렬 */
+    justify-content: center;
+  }
+  .menu-bar-icorn {
+    display: flex; /* flex 레이아웃 활성화 */
+    flex-direction: row; /* 아이템을 가로로 배치 */
+    align-items: center; /* 세로축(center)에서 아이템을 중앙 정렬 */
+    justify-content: center;
+  }
+  .dropdown-menu {
+    width: 150px;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 연한 검은색 테두리 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    background-color: #fff; /* 배경색 추가, 필요한 경우 조정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+  }
+  /* 메뉴바 내부 요소 스타일 (예: 버튼 등) */
+  .menu-bar button {
+    /* 버튼 스타일 */
+    margin: 10px; /* 여백 설정 */
+    width: 180px; /* 버튼 너비 */
+    /* 필요한 경우 여기에 더 많은 스타일을 추가할 수 있습니다 */
+  }
+
+  /* 소셜 아이콘 스타일 */
+  .social-icon {
+    display: block;
+    margin: 10px auto; /* 가운데 정렬 */
+    width: 50px; /* 아이콘 크기 */
+    height: 50px; /* 아이콘 크기 */
+    /* 필요한 경우 여기에 더 많은 스타일을 추가할 수 있습니다 */
+    cursor: pointer;
+  }
+  .detail_hmenu {
+    width: 750px;
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;
+    background-color: white;
+  }
+
+  .detail_hmewnu {
+    display: flex;
+    flex-direction: column;
+    /* background-color: antiquewhite; */
+    margin-left: 20px;
+  }
+  .detail_hmewnu01 {
+    display: flex;
+    /* background-color: aqua; */
+  }
+  .detail_hmewnu02 {
+    color: gray;
+    margin-right: 5px;
+  }
+  .detail_hmewnu_r {
+    width: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    /* background-color: #b64e09; */
+  }
+  .detail_hmewnu_e {
+    border-radius: 9px;
+    color: white;
+    font-size: 15px;
+    width: 50px;
+    background-color: #007bff;
+  }
+  .detail_hmenu_btn {
+    width: 60%;
+    height: 40px;
+    background-color: #ff6b6b;
+    border-radius: 30px;
+    margin-left: 120px;
+    font-weight: bold; /* 텍스트를 굵게 만듭니다. */
+    font-size: 20px; /* 텍스트의 크기를 24px로 설정합니다. */
+    display: flex; /* Flexbox를 사용하여 내부 요소를 정렬합니다. */
+    align-items: center; /* Flexbox를 사용하여 수직 중앙 정렬합니다. */
+    justify-content: center;
+    cursor: pointer;
+  }
+  .search_modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 불투명한 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 하단 정렬 */
+    z-index: 1050;
+  }
+
+  .search_modal {
+    width: 750px; /* 모달의 너비를 500px로 고정 */
+    max-width: 100%; /* 화면 너비를 넘지 않도록 최대 너비 설정 */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .search_modal_close_button {
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px;
+  }
+
+  .detail_hmenu_btn {
+    cursor: pointer;
+    color: white;
+    /* 추가적인 스타일 */
+  }
+}
+
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
+@media only screen and (max-width: 799px) {
+  .detail_go_buy {
+    width: 50%;
+    height: 80%;
+    background-color: #007bff; /* 예시 배경색 */
+    color: white; /* 버튼 내 텍스트 색상 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 10px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+  }
+  .detail_go_cart {
+    width: 50%;
+    height: 80%;
+    background-color: #b64e09; /* 예시 배경색 */
+    color: white; /* 버튼 내 텍스트 색상 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 10px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+  }
+  .headline {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .detailbody {
+    width: 100%;
+    height: 2200px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productbox {
+    width: 100%;
+    height: 450px;
+    /* background-color: #0056b3; */
+    display: flex; /* Flexbox 사용 설정 */
+    flex-direction: column; /* 요소들을 세로로 나열 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: flex-start;
+  }
+
+  .product_detail_img {
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .product_context_box {
+    width: 100%;
+    height: 300px;
+
+    margin-top: 20px;
+  }
+
+  .product_context_box_pname {
+    font-size: 45px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product_context_box_pprice {
+    font-size: 35px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    font-weight: bold;
+    display: flex;
+  }
+
+  .product_context_box_pprice_s {
+    font-size: 20px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+  }
+
+  .product_context_box_pcontext {
+    font-size: 20px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .product_amount_b {
+    display: flex;
+    width: 30%;
+    height: 50px;
+    justify-content: center; /* 왼쪽 정렬 */
+    align-items: center;
+    border: 1px solid gray;
+  }
+  .product_count_box {
+    width: 30%;
+  }
+  .amount_bp {
+    width: 50px;
+    height: 40px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .amount_ba {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+  }
+  .amount_bm {
+    width: 50px;
+    height: 40px;
+    font-size: 45px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .product_amount {
+    display: flex;
+    height: 100px;
+    margin-top: 10px;
+  }
+  .amount_cal {
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .productcontentbox {
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #007bff; */
+  }
+
+  .productcontentbox_i {
+    width: 750px;
+    height: 600px;
+  }
+
+  .buy:hover {
+    background-color: #0056b3; /* 호버 시 배경색 변경 */
+  }
+
+  .cart {
+    width: 100px;
+    height: 100px;
+    background-color: #b64e09; /* 예시 배경색 */
+    color: white; /* 버튼 내 텍스트 색상 */
+    border: none; /* 테두리 없애기 */
+    border-radius: 10px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 전환 효과 */
+  }
+
+  .cart:hover {
+    background-color: red; /* 호버 시 배경색 변경 */
+  }
+
+  /* 메뉴바 스타일 */
+  .menu-bar {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 연한 검은색 테두리 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    background-color: #fff; /* 배경색 추가, 필요한 경우 조정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+    /* 기타 스타일 */
+    display: flex;
+    flex-direction: column; /* 아이템을 가로로 배치 */
+    align-items: center; /* 세로축(center)에서 아이템을 중앙 정렬 */
+    justify-content: center;
+  }
+  .menu-bar-icorn {
+    display: flex; /* flex 레이아웃 활성화 */
+    flex-direction: row; /* 아이템을 가로로 배치 */
+    align-items: center; /* 세로축(center)에서 아이템을 중앙 정렬 */
+    justify-content: center;
+  }
+  .dropdown-menu {
+    width: 150px;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 연한 검은색 테두리 추가 */
+    border-radius: 10px; /* 모서리를 둥글게 만듦 */
+    background-color: #fff; /* 배경색 추가, 필요한 경우 조정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+  }
+  /* 메뉴바 내부 요소 스타일 (예: 버튼 등) */
+  .menu-bar button {
+    /* 버튼 스타일 */
+    margin: 10px; /* 여백 설정 */
+    width: 180px; /* 버튼 너비 */
+    /* 필요한 경우 여기에 더 많은 스타일을 추가할 수 있습니다 */
+  }
+
+  /* 소셜 아이콘 스타일 */
+  .social-icon {
+    display: block;
+    margin: 10px auto; /* 가운데 정렬 */
+    width: 50px; /* 아이콘 크기 */
+    height: 50px; /* 아이콘 크기 */
+    /* 필요한 경우 여기에 더 많은 스타일을 추가할 수 있습니다 */
+    cursor: pointer;
+  }
+  .detail_hmenu {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;
+    background-color: white;
+  }
+  .detail_hmenu_btn {
+    width: 60%;
+    height: 40px;
+    background-color: #ff6b6b;
+    border-radius: 30px;
+    margin-left: 160px;
+    font-weight: bold; /* 텍스트를 굵게 만듭니다. */
+    font-size: 20px; /* 텍스트의 크기를 24px로 설정합니다. */
+    display: flex; /* Flexbox를 사용하여 내부 요소를 정렬합니다. */
+    align-items: center; /* Flexbox를 사용하여 수직 중앙 정렬합니다. */
+    justify-content: center;
+    cursor: pointer;
+  }
+  .search_modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 불투명한 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 하단 정렬 */
+    z-index: 1050;
+  }
+
+  .search_modal {
+    width: 100%;
+
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .search_modal_close_button {
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px;
+  }
+
+  .detail_hmenu_btn {
+    cursor: pointer;
+    color: white;
+    /* 추가적인 스타일 */
+  }
+}

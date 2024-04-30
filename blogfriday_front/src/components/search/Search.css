@@ -1,0 +1,156 @@
+@media only screen and (min-width: 800px) {
+  .search_output {
+    font-size: 30px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+  }
+
+  .product_name_red {
+    font-size: 50px;
+    color: red;
+  }
+  .product_blank4 {
+    height: 30px;
+  }
+  .product_list_body {
+    width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .product_map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 세 개의 열 생성 */
+    grid-gap: 10px; /* 열과 행 사이의 간격 설정 */
+    width: 100%;
+  }
+
+  .map_box {
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .map_box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .search_img {
+    width: 250px;
+    height: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid rgb(241, 236, 234);
+  }
+  .search_context {
+    width: 100px;
+    height: 50px;
+  }
+  .search_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    width: 200px;
+    height: 70px;
+    /* border: 1px solid black;  */
+    font-weight: bold; /* 텍스트를 굵게 */
+    margin-top: 10px;
+  }
+  .search_text_name {
+  }
+  .search_text_price {
+    height: 50px;
+    font-size: 30px;
+  }
+}
+
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
+/* ///////////////////////////////////////// */
+@media only screen and (max-width: 799px) {
+  .search_output {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+  }
+  .product_list_body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .product_name_red {
+    font-size: 50px;
+    color: red;
+  }
+  .product_blank4 {
+    height: 30px;
+  }
+
+  .product_map {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: 10px;
+    width: 100%;
+  }
+
+  .map_box {
+    height: 370px;
+    width: 100%;
+    border-bottom: 3px solid rgba(236, 236, 237, 0.788);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .map_box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .search_img {
+    width: 220px;
+    height: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid rgb(241, 236, 234);
+  }
+  .search_context {
+    width: 20%;
+    height: 30%;
+  }
+  .search_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    width: 200px;
+    height: 30%;
+    /* border: 1px solid black;  */
+    font-weight: bold; /* 텍스트를 굵게 */
+  }
+  .search_text_name {
+  }
+  .search_text_price {
+    height: 50px;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,206 @@
+@media only screen and (min-width: 800px) {
+  .chatdot-form-container {
+    max-width: 100%; /* 폼의 최대 너비를 설정 */
+
+    /* border: 1px solid #ddd; */
+  }
+  .chatdot-form-container_name {
+  }
+  .chatdot-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .chatdot-form-group {
+    margin-bottom: 15px;
+  }
+
+  .chatdot-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .chatdot_header_tag {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 25px;
+    width: 300px;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+  .profile-image {
+    width: 200px; /* 작은 사이즈로 조정 */
+    height: 200px; /* 작은 사이즈로 조정 */
+    object-fit: cover;
+    border-radius: 12px; /* 둥근 사각형 모양으로 조정 */
+    margin-bottom: 15px;
+    border: 2px solid #eee7e7; /* 테두리 스타일 추가 */
+    margin: 0 auto; /* 가운데 정렬 */
+    display: block; /* 블록 요소로 설정하여 가로폭을 100%로 설정 */
+  }
+
+  .chatdot-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 18px; /* 위아래 8px, 좌우 16px의 패딩 값을 지정 */
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px; /* 버튼을 아래로 내리는 여백 설정 */
+  }
+
+  .chatdot-btn:hover {
+    background-color: #ff4d4d;
+  }
+
+  .chatdotremove-btn {
+    display: block;
+    width: 25%;
+    padding: 5px 15px; /* 위아래 8px, 좌우 16px의 패딩 값을 지정 */
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #6b6b68;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px; /* 버튼을 아래로 내리는 여백 설정 */
+  }
+
+  .chatdotremove-btn:hover {
+    background-color: #000000;
+  }
+
+  .chatdot-btn-btn-box {
+    display: flex;
+  }
+  .chatdot-btn-btn {
+    width: 50%;
+    height: 50px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+  }
+  .chatdot-btn-removebtn {
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    border-radius: 5px;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .chatdot-form-container {
+    max-width: 100%; /* 폼의 최대 너비를 설정 */
+
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+  }
+  .chatdot-form-container_name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .chatdot-form-group {
+    display: flex;
+  }
+  .chatdot_label {
+    width: 30%;
+  }
+  .chatdot_header_tag {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 25px;
+    width: 200px;
+    margin-top: 13px;
+  }
+
+  .chatdot-form-group {
+    margin-bottom: 15px;
+  }
+
+  .chatdot-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .chatdot_form-control {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .profile-image {
+    width: 200px; /* 작은 사이즈로 조정 */
+    height: 200px; /* 작은 사이즈로 조정 */
+    object-fit: cover;
+    border-radius: 12px; /* 둥근 사각형 모양으로 조정 */
+    margin-bottom: 15px;
+    border: 2px solid #eee7e7; /* 테두리 스타일 추가 */
+    margin: 0 auto; /* 가운데 정렬 */
+    display: block; /* 블록 요소로 설정하여 가로폭을 100%로 설정 */
+  }
+
+  .chatdot-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 18px; /* 위아래 8px, 좌우 16px의 패딩 값을 지정 */
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .chatdot-btn:hover {
+    background-color: #ff4d4d;
+  }
+
+  .chatdotremove-btn {
+    display: block;
+    width: 25%;
+    padding: 5px 15px; /* 위아래 8px, 좌우 16px의 패딩 값을 지정 */
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #6b6b68;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px; /* 버튼을 아래로 내리는 여백 설정 */
+  }
+
+  .chatdotremove-btn:hover {
+    background-color: #000000;
+  }
+  .chatdot-btn-btn-box {
+    display: flex;
+  }
+  .chatdot-btn-btn {
+    width: 50%;
+    height: 50px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+  }
+  .chatdot-btn-removebtn {
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    border-radius: 5px;
+  }
+}
