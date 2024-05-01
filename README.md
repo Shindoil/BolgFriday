@@ -66,8 +66,7 @@ Blogfriday는 AI 챗봇과 블로그형 쇼핑몰 웹사이트를 결합한 프�
 7. React 프런트엔드 개발 서버를 실행합니다:
 - cd frontend
 - npm start
-
-  8. 웹 브라우저에서 `http://localhost:3000`으로 접속하여 애플리케이션을 사용합니다.
+8. 웹 브라우저에서 `http://localhost:3000`으로 접속하여 애플리케이션을 사용합니다.
 
 ## 기여자
 - 신도일 ( NLP, 결제 )
