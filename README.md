@@ -43,17 +43,17 @@
 
 # 설치 및 실행 방법
 - 프로젝트 저장소를 클론합니다:
--- codegit clone https://github.com/your-username/blogfriday.git
+-- git clone https://github.com/your-username/blogfriday.git
 - 프로젝트 디렉토리로 이동합니다:
--- codecd blogfriday
+-- cd blogfriday
 - 필요한 종속성을 설치합니다:
--- codepip install -r requirements.txt
+-- pip install -r requirements.txt
 - npm install
 - 데이터베이스를 설정하고 필요한 테이블을 생성합니다.
 - Flask 백엔드 서버를 실행합니다:
--- codepython app.py
+-- python app.py
 - React 프런트엔드 개발 서버를 실행합니다:
--- codenpm start
+-- npm start
 
 - 웹 브라우저에서 http://localhost:3000으로 접속하여 애플리케이션을 사용합니다.
 
