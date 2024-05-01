@@ -51,16 +51,19 @@ Blogfriday는 AI 챗봇과 블로그형 쇼핑몰 웹사이트를 결합한 프�
 - `python/`: Python 스크립트 및 Flask 애플리케이션 파일
 
 ## 설치 및 실행 방법
-1. 프로젝트 저장소를 클론합니다 - `git clone https://github.com/your-username/blogfriday.git`
-2. 프로젝트 디렉토리로 이동합니다 - `cd blogfriday`
+1. 프로젝트 저장소를 클론합니다 -
+- `git clone https://github.com/your-username/blogfriday.git`
+2. 프로젝트 디렉토리로 이동합니다
+- `cd blogfriday`
 3. 필요한 종속성을 설치합니다: Spring Boot 종속성 설치
 - `mvn install`
-- React 종속성 설치
+4 React 종속성 설치
 - `cd frontend`
 - `npm install`
-4. 데이터베이스를 설정하고 필요한 테이블을 생성합니다.
-5. Spring Boot 백엔드 서버를 실행합니다:- mvn spring-boot:run
-6. Flask 백엔드 서버를 실행합니다:
+5. 데이터베이스를 설정하고 필요한 테이블을 생성합니다.
+6. Spring Boot 백엔드 서버를 실행합니다:
+  - `mvn spring-boot:run`
+7. Flask 백엔드 서버를 실행합니다:
 - `cd python`
 - `python app.py`
 7. React 프런트엔드 개발 서버를 실행합니다:
