@@ -20,7 +20,7 @@ public class AIServiceImp implements AIService {
     public String predict(String text, List<String> productNames) {
         // 파이썬 스크립트 경로와 인터프리터 경로 설정
         String pythonScriptPath = "src/main/resources/python/predict.py";
-        String pythonInterpreterPath = "C:/Users/username/AppData/Local/Programs/Python/Python39/python.exe";
+        String pythonInterpreterPath = System.getenv().getOrDefault("PYTHON_EXECUTABLE", "python");
 
         // 명령 실행을 위한 ProcessBuilder 생성
         ProcessBuilder pb = new ProcessBuilder(pythonInterpreterPath, pythonScriptPath, text);
